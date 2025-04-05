@@ -1,0 +1,385 @@
+/* 🎨 General Styles */
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #fccb90, #f6a7b8);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+.timer_text{
+        font-family: "Moon Dance", cursive;
+        font-weight: bold;
+        font-style: normal;
+}
+
+.timer_container .timer_text{
+    font-size: 1.5rem;
+}
+
+#song-button {
+    font-family: "Moon Dance", cursive;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* 🌈 Background Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 🔲 Fix Content Trimming */
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0 10px;
+}
+
+/* 🕒 Countdown Timer */
+.timer_container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: pink;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: 2px solid #E75480;
+    padding: 10px;
+}
+
+/* ⏳ Timer Boxes */
+.timer {
+    width: 60px;
+    height: 40px;
+    background-color: yellow;
+    border: 2px solid black;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    margin: 5px;
+}
+
+/* 🔢 Spacer (for : between timers) */
+.space {
+    font-size: 1rem;
+    margin: 0 5px;
+}
+
+
+/* 📜 Message Boxes */
+
+.paragraph {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #FC9483;
+    font-weight: bold;
+    padding: 15px;
+    text-align: justify;
+    max-width: 100%;
+    font-family: "Moon Dance", cursive;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6rem !important; /* Ensures the font-size is applied */
+    line-height: 1.1;
+    padding:0px;
+}  
+
+/* 🍰 Images Section */
+.picture {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin: 10px auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    padding: 10px;
+}
+
+/* 🍰 Individual Images */
+.picture img {
+    width: 300px; /* Fixed width for desktop */
+    height: 300px; /* Fixed height */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Ensures images are cropped properly */
+}
+
+/* 📱 Mobile Styles */
+@media screen and (max-width: 600px) {
+    .picture img {
+        width: 220px; /* Keep images fixed in mobile */
+        height: 250px;
+    }
+}
+
+/* 🎈 Floating Emojis */
+.floating-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index:1;
+}
+
+/* 🎉 Floating Items */
+.floating-item {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.9;
+    animation: float 5s linear infinite;
+}
+
+
+/* 🎈 Random Floating Positions */
+.floating-item:nth-child(1) { left: 3%; animation-duration: 6s; }
+.floating-item:nth-child(2) { left: 10%; animation-duration: 7s; }
+.floating-item:nth-child(3) { left: 18%; animation-duration: 5.5s; }
+.floating-item:nth-child(4) { left: 25%; animation-duration: 6.8s; }
+.floating-item:nth-child(5) { left: 32%; animation-duration: 8s; }
+.floating-item:nth-child(6) { left: 40%; animation-duration: 5.2s; }
+.floating-item:nth-child(7) { left: 47%; animation-duration: 7.5s; }
+.floating-item:nth-child(8) { left: 54%; animation-duration: 6.3s; }
+.floating-item:nth-child(9) { left: 61%; animation-duration: 9s; }
+.floating-item:nth-child(10) { left: 68%; animation-duration: 5.8s; }
+.floating-item:nth-child(11) { left: 75%; animation-duration: 7.2s; }
+.floating-item:nth-child(12) { left: 82%; animation-duration: 6.6s; }
+.floating-item:nth-child(13) { left: 90%; animation-duration: 8.5s; }
+.floating-item:nth-child(14) { left: 97%; animation-duration: 5.9s; }
+
+
+/* 🎵 Song Button */
+#song-button {
+    background: #ff9a9e;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    border: 2px solid black;
+    margin: 15px 10px;
+}
+
+#song-button:hover {
+    background: #f8828a;
+}
+
+#song-button:active {
+    background: #e46b74;
+}
+
+/* 📱 Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    .timer {
+        width: 50px;
+        height: 35px;
+        font-size: 1em;
+    }
+
+    .timer_container {
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    .paragraph {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .picture img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.floating-item.balloon {
+    width: 50px; /* Balloon width */
+    height: 70px; /* Balloon height */
+    border-radius: 50%; /* Oval shape */
+    position: absolute;
+    bottom: 0;
+}
+
+/* 🎗️ Balloon String */
+.floating-item.balloon::after {
+    content: "";
+    width: 2px;
+    height: 50px;
+    background: black;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 🎈 Floating Animation - Move Completely to the Top */
+@keyframes float {
+    0% { 
+        transform: translateY(100vh) scale(0.8); 
+        opacity: 0.4; 
+    }
+    100% { 
+        transform: translateY(-120vh) scale(1.2); /* Move beyond the screen */
+        opacity: 0.4; /* Fade out smoothly */
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tangerine:wght@700&display=swap');
+
+
+.birthday_Wish{
+    display: flex;
+    flex-wrap: wrap; /* Allows text to wrap */
+    justify-content: center; /* Centers content */
+    width: 100%;
+}
+
+.birthday_Wish h1 {
+    font-size: 1.9rem; /* Adjust size as needed */
+    white-space: normal; /* Allows text to wrap */
+    word-break: break-word; /* Ensures long words break correctly */
+    overflow: visible; /* Prevents clipping */
+    text-align: center; /* Centers text */
+    max-width: 100%; /* Ensures it doesn't exceed container width */
+    font-family: 'Sacramento', cursive;  
+    color: #ff4081; /* Cute pink */
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #ff80ab, 0 0 20px #ff4081, 0 0 30px #ff1a75;
+    -webkit-text-stroke: 0.05px black; /* Adds a black border */
+    animation: glow 1.5s infinite alternate, floatText 3s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    0% { 
+        text-shadow: 0 0 5px #ff80ab, 0 0 10px #ff4081, 0 0 15px #ff1a75; 
+        transform: scale(1);
+    }
+    50% { 
+        text-shadow: 0 0 10px #ff99bb, 0 0 20px #ff4d94, 0 0 30px #ff1a75; 
+        transform: scale(1.05);
+    }
+    100% { 
+        text-shadow: 0 0 15px #ffb3c6, 0 0 25px #ff4d94, 0 0 40px #ff0055; 
+        transform: scale(1);
+    }
+}
+
+
+/* Floating Animation */
+@keyframes floatText {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+#birthday-content {
+    display: none;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center; /* Centers the carousel horizontally */
+    width: 100%; /* Ensures full-width alignment */
+}
+
+.carousel {
+    width: 400px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-container img {
+    width: 100%;  /* Each image takes full carousel width */
+    height: 100%; /* Each image takes full carousel height */
+    object-fit: contain; /* Ensures full image is visible without cropping */
+    background-color: #000; /* Fill empty space with black */
+}
+
+
+.birthday_Wish {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.carousel_outerDiv{
+    display: flex;
+    justify-content: center; /* Centers the carousel horizontally */
+    width: 100%; /* Ensures full-width alignment */
+margin-top:20px;
+margin-bottom: 20px; /* Adjust as needed to position below text */
+}
+
+
+/*  */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* 🎞️ Slideshow Images */
+.slideshow-container img {
+    max-width: 1000px; /* Maintain aspect ratio */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image is properly cropped */
+}
+
+/* 🎞️ Slideshow Images */
+.slideshow-container img {
+    width: auto; /* Maintain aspect ratio */
+    height: 300px; /* Set a fixed height */
+    object-fit: contain; /* Ensures the full image is visible */
+    display: block;
+    margin: auto;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.mySlides{
+    margin: 20px 10px;
+}
+
