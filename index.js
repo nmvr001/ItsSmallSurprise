@@ -1,3 +1,22 @@
+window.onload = function () {
+    document.getElementById("popup").style.display = "block";
+
+    document.getElementById("close-btn").onclick = function () {
+      document.getElementById("popup").style.display = "none";
+    };
+  };
+
+  document.getElementById("close-btn").onclick = function () {
+    const popup = document.getElementById("popup");
+    popup.classList.add("fade-out");
+  
+    // Optional: actually remove it from the DOM or hide after transition
+    setTimeout(() => {
+      popup.style.display = "none"; // or remove it entirely
+    }, 6000); // matches the transition duration
+  };
+  
+
 $(document).ready(function () {
     let isSongPlaying = false;
     let isBgMusicPlaying = false;
@@ -34,7 +53,7 @@ $(document).ready(function () {
 
     function RunTimer() {
         const fixDate = new Date(2025, 3, 13, 0, 0, 0, 0);
-        const d = new Date();
+        const d = new Date()
         const difference = fixDate - d;
 
         if (difference <= 0) {

@@ -383,3 +383,56 @@ margin-bottom: 20px; /* Adjust as needed to position below text */
     margin: 20px 10px;
 }
 
+
+/* CSS for Pop message */
+
+#popup {
+   /* Fading  */
+   opacity: 1;
+   visibility: visible;
+   transition: opacity 5s ease, visibility 5s ease;
+   z-index: 10;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(10,10,10,010);
+   }
+
+     /* Fading When closing */
+  #popup.fade-out {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+#popup-content {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    font-family: "Moon Dance", cursive;
+    font-weight:bold;
+    font-size:1.5rem;  
+    background: linear-gradient(-45deg, #ff6ec4, #ff9a8b, #fcb045, #ff3cac, #ffe53b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+#close-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight:bold;
+    border: 1px solid black;
+   }
+
+   @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
